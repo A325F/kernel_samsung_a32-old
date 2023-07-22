@@ -1363,7 +1363,7 @@ void vcu_get_gce_lock(struct platform_device *pdev, unsigned long codec_type)
 		return;
 	}
 	if (codec_type >= VCU_CODEC_MAX) {
-		pr_info("[VCU] %s invalid codec type %d.\n", __func__, codec_type);
+		pr_info("[VCU] %s invalid codec type %ld.\n", __func__, codec_type);
 		return;
 	}
 	vcu = platform_get_drvdata(pdev);
@@ -1380,7 +1380,7 @@ void vcu_put_gce_lock(struct platform_device *pdev, unsigned long codec_type)
 		return;
 	}
 	if (codec_type >= VCU_CODEC_MAX) {
-		pr_info("[VCU] %s invalid codec type %d.\n", __func__, codec_type);
+		pr_info("[VCU] %s invalid codec type %ld.\n", __func__, codec_type);
 		return;
 	}
 	vcu = platform_get_drvdata(pdev);
